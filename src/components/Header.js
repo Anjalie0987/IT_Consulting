@@ -144,10 +144,9 @@ export default function Header() {
                             {/* Mega Menu Panel */}
                             {item.type === "dropdown" && item.megaMenu && (
                                 <div
-                                    className={`absolute left-0 top-full w-full bg-white shadow-xl border-t border-gray-100 transition-all duration-200 ease-in-out origin-top ${activeDropdown === item.label
-                                        ? "opacity-100 translate-y-0 visible"
-                                        : "opacity-0 -translate-y-2 invisible pointer-events-none"
-                                        }`}
+                                    className={`absolute left-0 top-full w-full bg-white shadow-xl border-t border-gray-100 transition-all duration-200 ease-in-out origin-top
+                                        ${activeDropdown === item.label ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible pointer-events-none"}
+                                    `}
                                     role="region"
                                     aria-label={`${item.label} submenu`}
                                 >
@@ -155,32 +154,32 @@ export default function Header() {
                                         <div className="grid grid-cols-12 gap-10">
                                             {/* Section Title (Left Column) - Takes up 3 cols */}
                                             <div className="col-span-3 border-r border-gray-100 pr-10">
-                                                <h2 className="text-3xl font-bold text-gray-900 mb-6">{item.label}</h2>
+                                                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                                                    {item.megaMenu?.intro?.heading || item.label}
+                                                </h2>
                                                 <p className="text-base text-gray-500 leading-relaxed">
-                                                    Explore our comprehensive range of {item.label.toLowerCase()} tailored for your enterprise needs.
+                                                    {item.megaMenu?.intro?.description || `Explore our comprehensive range of ${item.label.toLowerCase()} tailored for your enterprise needs.`}
                                                 </p>
-                                                {item.megaMenu.note && (
-                                                    <div className="mt-8 p-5 bg-gray-50 rounded-md border border-gray-100">
-                                                        <p className="text-sm font-medium text-gray-700">
-                                                            {item.megaMenu.note}
-                                                        </p>
-                                                    </div>
-                                                )}
                                             </div>
 
                                             {/* Columns Grid - Takes up 9 cols */}
                                             <div className="col-span-9 grid grid-cols-4 gap-x-8 gap-y-10">
                                                 {item.megaMenu.columns.map((col, idx) => (
                                                     <div key={idx} className="flex flex-col space-y-5">
-                                                        <h3 className="text-sm font-bold text-gray-900 tracking-wider uppercase border-b border-gray-200 pb-2">
-                                                            {col.title}
-                                                        </h3>
-                                                        <ul role="list" className="space-y-3">
+                                                        {col.title && (
+                                                            <h3 className="text-sm font-bold text-gray-900 tracking-wider uppercase border-b border-gray-200 pb-2">
+                                                                {col.title}
+                                                            </h3>
+                                                        )}
+                                                        <ul role="list" className={item.label === "Who We Are" ? "space-y-6" : "space-y-3"}>
                                                             {col.links.map((link) => (
                                                                 <li key={link.label}>
                                                                     <Link
                                                                         href={link.href}
-                                                                        className="text-sm text-gray-600 hover:text-blue-700 hover:underline hover:decoration-blue-700/30 hover:underline-offset-4 transition-all block"
+                                                                        className={`block transition-all duration-200 ${item.label === "Who We Are"
+                                                                                ? "text-base font-semibold text-gray-800 hover:text-blue-700 hover:translate-x-1"
+                                                                                : "text-sm text-gray-600 hover:text-blue-700 hover:underline hover:decoration-blue-700/30 hover:underline-offset-4"
+                                                                            }`}
                                                                     >
                                                                         {link.label}
                                                                     </Link>

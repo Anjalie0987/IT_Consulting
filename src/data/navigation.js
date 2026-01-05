@@ -5,6 +5,10 @@ export const navigation = [
     href: null,
     type: "dropdown",
     megaMenu: {
+      intro: {
+        heading: "What We Do",
+        description: "Explore our comprehensive range of services tailored for your enterprise needs."
+      },
       columns: [
         {
           title: "Strategy & Consulting",
@@ -55,79 +59,28 @@ export const navigation = [
     },
   },
   {
-    label: "What We Think",
-    href: null,
-    type: "dropdown",
-    megaMenu: {
-      columns: [
-        {
-          title: "Insights",
-          links: [
-            { label: "Technology Trends", href: "/insights/tech-trends" },
-            { label: "Digital Transformation", href: "/insights/digital-transformation" },
-            { label: "Cloud & Security", href: "/insights/cloud-security" },
-            { label: "Data & AI", href: "/insights/data-ai" },
-          ],
-        },
-        {
-          title: "Research & Reports",
-          links: [
-            { label: "Industry Reports", href: "/insights/industry-reports" },
-            { label: "Market Insights", href: "/insights/market-insights" },
-            { label: "Whitepapers", href: "/insights/whitepapers" },
-          ],
-        },
-        {
-          title: "Case Insights",
-          links: [
-            { label: "Client Success Stories", href: "/insights/success-stories" },
-            { label: "Transformation Journeys", href: "/insights/transformation-journeys" },
-          ],
-        },
-        {
-          title: "Events & Webinars",
-          links: [
-            { label: "Upcoming Webinars", href: "/insights/webinars" },
-            { label: "Past Events", href: "/insights/past-events" },
-          ],
-        },
-      ],
-    },
+    label: "Insights",
+    href: "/insights",
+    type: "link",
   },
   {
     label: "Who We Are",
     href: null,
     type: "dropdown",
     megaMenu: {
+      intro: {
+        heading: "Who We Are",
+        description: "We are an intelligent IT consulting firm helping organizations solve complex challenges through technology, strategy, and execution excellence."
+      },
       columns: [
         {
-          title: "Company",
+          title: "",
           links: [
-            { label: "Company Overview", href: "/company/overview" },
-            { label: "Mission & Vision", href: "/company/mission-vision" },
-            { label: "Core Values", href: "/company/core-values" },
-          ],
-        },
-        {
-          title: "Leadership",
-          links: [
-            { label: "Executive Leadership", href: "/company/leadership" },
-            { label: "Advisory Board", href: "/company/advisory-board" },
-          ],
-        },
-        {
-          title: "Why Choose Us",
-          links: [
-            { label: "Our Approach", href: "/company/our-approach" },
-            { label: "Our Differentiators", href: "/company/differentiators" },
-            { label: "Client-Centric Philosophy", href: "/company/philosophy" },
-          ],
-        },
-        {
-          title: "Partnerships & Trust",
-          links: [
-            { label: "Technology Partnerships", href: "/company/partnerships" },
-            { label: "Certifications & Compliance", href: "/company/certifications" },
+            { label: "About Us", href: "/about" },
+            { label: "Leadership", href: "/company/leadership" },
+            { label: "Success Stories", href: "/insights/success-stories" },
+            { label: "Our Policies", href: "/policies" },
+            { label: "News & Media", href: "/news" },
           ],
         },
       ],
@@ -138,7 +91,10 @@ export const navigation = [
     href: null,
     type: "dropdown",
     megaMenu: {
-      note: "Our IT and crypto consulting solutions apply across all industries without boundaries.",
+      intro: {
+        heading: "Industries",
+        description: "Our IT and crypto consulting solutions apply across all industries without boundaries."
+      },
       columns: [
         {
           title: "Financial & Regulated Industries",
@@ -174,7 +130,7 @@ export const navigation = [
     type: "link",
   },
   {
-    label: "Contact",
+    label: "Contact Us",
     href: "/contact",
     type: "link",
   },
