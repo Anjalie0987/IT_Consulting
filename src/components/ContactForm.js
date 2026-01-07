@@ -1,8 +1,99 @@
 "use client";
 
+import React from 'react';
+
 import { motion } from "framer-motion";
 
 export default function ContactForm() {
+    const [formData, setFormData] = React.useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        jobTitle: '',
+        phone: '',
+        zipCode: '',
+        message: '',
+        termsAccepted: false,
+        companyWebsite: ''
+    });
+
+    const [status, setStatus] = React.useState({
+        submitting: false,
+        submitted: false,
+        success: false,
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: type === 'checkbox' ? checked : value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Prevent double submission
+        if (status.submitting) return;
+
+        setStatus({ submitting: true, submitted: false, success: false, message: '' });
+
+        try {
+            const payload = {
+                ...formData,
+                companyWebsite: '' // Honeypot field must be empty for real users
+            };
+
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                setStatus({
+                    submitting: false,
+                    submitted: true,
+                    success: true,
+                    message: data.message
+                });
+                // Reset form
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    company: '',
+                    jobTitle: '',
+                    phone: '',
+                    zipCode: '',
+                    message: '',
+                    termsAccepted: false
+                });
+            } else {
+                setStatus({
+                    submitting: false,
+                    submitted: true,
+                    success: false,
+                    message: data.message || 'Something went wrong. Please try again.'
+                });
+            }
+        } catch (error) {
+            setStatus({
+                submitting: false,
+                submitted: true,
+                success: false,
+                message: 'An unexpected error occurred. Please try again later.'
+            });
+        }
+    };
+
     return (
         <section className="w-full bg-[#FAFAFA] py-20 px-6 md:px-12 lg:px-24">
             <div className="max-w-7xl mx-auto">
@@ -30,12 +121,21 @@ export default function ContactForm() {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="w-full lg:col-span-3"
                     >
-                        <form className="space-y-6">
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            {status.submitted && (
+                                <div className={`p-4 rounded-xl ${status.success ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
+                                    {status.message}
+                                </div>
+                            )}
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="sr-only">First Name</label>
                                     <input
                                         type="text"
+                                        name="firstName"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
                                         placeholder="First Name*"
                                         className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
                                         required
@@ -45,6 +145,9 @@ export default function ContactForm() {
                                     <label className="sr-only">Last Name</label>
                                     <input
                                         type="text"
+                                        name="lastName"
+                                        value={formData.lastName}
+                                        onChange={handleChange}
                                         placeholder="Last Name*"
                                         className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
                                         required
@@ -57,6 +160,9 @@ export default function ContactForm() {
                                     <label className="sr-only">Email</label>
                                     <input
                                         type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         placeholder="Email*"
                                         className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
                                         required
@@ -66,6 +172,9 @@ export default function ContactForm() {
                                     <label className="sr-only">Company</label>
                                     <input
                                         type="text"
+                                        name="company"
+                                        value={formData.company}
+                                        onChange={handleChange}
                                         placeholder="Company*"
                                         className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
                                         required
@@ -78,6 +187,9 @@ export default function ContactForm() {
                                     <label className="sr-only">Job Title</label>
                                     <input
                                         type="text"
+                                        name="jobTitle"
+                                        value={formData.jobTitle}
+                                        onChange={handleChange}
                                         placeholder="Job Title*"
                                         className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
                                         required
@@ -87,6 +199,9 @@ export default function ContactForm() {
                                     <label className="sr-only">Phone</label>
                                     <input
                                         type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
                                         placeholder="Phone"
                                         className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
                                     />
@@ -97,6 +212,9 @@ export default function ContactForm() {
                                 <label className="sr-only">Zip / Postal Code</label>
                                 <input
                                     type="text"
+                                    name="zipCode"
+                                    value={formData.zipCode}
+                                    onChange={handleChange}
                                     placeholder="Zip / Postal Code*"
                                     className="w-full md:w-1/2 bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
                                     required
@@ -106,6 +224,9 @@ export default function ContactForm() {
                             <div className="pt-2">
                                 <label className="sr-only">Your Message</label>
                                 <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     placeholder="Your Message*"
                                     className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600 resize-none min-h-[200px]"
                                     required
@@ -116,6 +237,9 @@ export default function ContactForm() {
                                 <input
                                     type="checkbox"
                                     id="terms"
+                                    name="termsAccepted"
+                                    checked={formData.termsAccepted}
+                                    onChange={handleChange}
                                     className="mt-1 h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                 />
                                 <label htmlFor="terms" className="text-sm text-gray-500 leading-relaxed">
@@ -126,9 +250,10 @@ export default function ContactForm() {
                             <div className="pt-4">
                                 <button
                                     type="submit"
-                                    className="rounded-full bg-blue-600 px-10 py-4 text-white font-semibold shadow-lg hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                                    disabled={status.submitting}
+                                    className={`rounded-full px-10 py-4 text-white font-semibold shadow-lg transition-all duration-300 ${status.submitting ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1'}`}
                                 >
-                                    Submit form
+                                    {status.submitting ? 'Submitting...' : 'Submit form'}
                                 </button>
                             </div>
                         </form>

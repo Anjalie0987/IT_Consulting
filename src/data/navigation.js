@@ -78,7 +78,7 @@ export const navigation = [
           links: [
             { label: "About Us", href: "/about" },
             { label: "Leadership", href: "/company/leadership" },
-            { label: "Success Stories", href: "/insights/success-stories" },
+            { label: "Success Stories", href: "/success-stories" },
             { label: "Our Policies", href: "/policies" },
             { label: "News & Media", href: "/news" },
           ],
