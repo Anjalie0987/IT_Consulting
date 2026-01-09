@@ -34,9 +34,7 @@ export async function POST(request) {
             lastName,
             email,
             company,
-            jobTitle,
             phone,
-            zipCode,
             message,
             termsAccepted,
             companyWebsite, // Hidden honeypot field
@@ -93,8 +91,6 @@ export async function POST(request) {
             !lastName?.trim() ||
             !email?.trim() ||
             !company?.trim() ||
-            !jobTitle?.trim() ||
-            !zipCode?.trim() ||
             !message?.trim()
         ) {
             return NextResponse.json(
@@ -154,8 +150,6 @@ export async function POST(request) {
         Email: ${email}
         Phone: ${phone || 'N/A'}
         Company: ${company}
-        Job Title: ${jobTitle}
-        Zip Code: ${zipCode}
         
         Message:
         ${message}
@@ -166,8 +160,6 @@ export async function POST(request) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
         <p><strong>Company:</strong> ${company}</p>
-        <p><strong>Job Title:</strong> ${jobTitle}</p>
-        <p><strong>Zip Code:</strong> ${zipCode}</p>
         <br/>
         <h3>Message:</h3>
         <p>${sanitizedMessage.replace(/\n/g, '<br>')}</p>

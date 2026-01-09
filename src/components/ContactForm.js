@@ -10,9 +10,7 @@ export default function ContactForm() {
         lastName: '',
         email: '',
         company: '',
-        jobTitle: '',
         phone: '',
-        zipCode: '',
         message: '',
         termsAccepted: false,
         companyWebsite: ''
@@ -70,9 +68,7 @@ export default function ContactForm() {
                     lastName: '',
                     email: '',
                     company: '',
-                    jobTitle: '',
                     phone: '',
-                    zipCode: '',
                     message: '',
                     termsAccepted: false
                 });
@@ -182,42 +178,15 @@ export default function ContactForm() {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label className="sr-only">Job Title</label>
-                                    <input
-                                        type="text"
-                                        name="jobTitle"
-                                        value={formData.jobTitle}
-                                        onChange={handleChange}
-                                        placeholder="Job Title*"
-                                        className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <label className="sr-only">Phone</label>
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        placeholder="Phone"
-                                        className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
-                                    />
-                                </div>
-                            </div>
-
                             <div>
-                                <label className="sr-only">Zip / Postal Code</label>
+                                <label className="sr-only">Phone</label>
                                 <input
-                                    type="text"
-                                    name="zipCode"
-                                    value={formData.zipCode}
+                                    type="tel"
+                                    name="phone"
+                                    value={formData.phone}
                                     onChange={handleChange}
-                                    placeholder="Zip / Postal Code*"
-                                    className="w-full md:w-1/2 bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
-                                    required
+                                    placeholder="Phone"
+                                    className="w-full bg-[#F3F4F6] text-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all border border-transparent placeholder-gray-600"
                                 />
                             </div>
 
