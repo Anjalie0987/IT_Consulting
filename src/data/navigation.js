@@ -77,10 +77,10 @@ export const navigation = [
           title: "",
           links: [
             { label: "About Us", href: "/about" },
-            { label: "Leadership", href: "/company/leadership" },
+            { label: "Leadership", href: "/about/leadership" },
             { label: "Success Stories", href: "/success-stories" },
             { label: "Our Policies", href: "/policies" },
-            { label: "News & Media", href: "/news" },
+            { label: "News & Media", href: "/who-we-are/news-media" },
           ],
         },
       ],
