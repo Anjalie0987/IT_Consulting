@@ -32,12 +32,6 @@ export default function AboutHero() {
                         <p className="text-base md:text-lg text-gray-200 leading-relaxed max-w-2xl mb-6">
                             We are an intelligent IT consulting firm helping organizations solve complex business challenges through technology, strategy, and execution.
                         </p>
-                        <button className="group inline-flex items-center px-6 py-3 bg-white text-slate-900 text-sm font-semibold rounded-full hover:bg-blue-50 transition-all duration-300">
-                            Learn More
-                            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </button>
                     </div>
 
                     {/* Right Secondary Card */}
@@ -58,12 +52,6 @@ export default function AboutHero() {
                         <p className="text-sm text-gray-300 leading-relaxed mb-4">
                             Founded in 2014, we partner with enterprises to design, build, and scale digital solutions that deliver lasting business impact.
                         </p>
-
-                        <button className="w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center hover:bg-blue-50 transition-colors">
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </button>
                     </div>
 
                 </div>

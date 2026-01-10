@@ -45,7 +45,7 @@ export default function Hero() {
                         </span>
                         <span className="text-3xl md:text-5xl font-semibold tracking-tight text-[#F8FAFC]">
                             through intelligent{" "}
-                            <span className="text-[#3B82F6]">IT consulting.</span>
+                            <span className="text-[#3B82F6]">IT consulting</span>
                         </span>
                     </h1>
 
@@ -69,80 +69,101 @@ export default function Hero() {
                             title: "Digital Transformation",
                             desc: "Modernizing enterprise systems to drive agility and growth.",
                             bg: "bg-[#EEF2FF]",
+                            img: "/images/enterprise_digital_transformation_abstract_1767989394636.png"
                         },
                         {
                             title: "Cloud & Infrastructure",
                             desc: "Scalable, secure cloud architectures for modern businesses.",
                             bg: "bg-[#ECFEFF]",
+                            img: "/images/cloud_engineering_platforms_abstract_1767989449348.png"
                         },
                         {
                             title: "Data, Analytics & AI",
                             desc: "Turning data into intelligent, actionable insights.",
                             bg: "bg-[#FFFBEB]",
+                            img: "/AI.jpg"
                         },
                         {
                             title: "Cybersecurity & Risk",
                             desc: "Protecting digital assets with proactive security strategies.",
                             bg: "bg-[#ECFDF5]",
+                            img: "/cyber.jpg"
                         },
                         {
                             title: "Blockchain, Crypto & Web3",
                             desc: "Decentralized solutions for next-generation platforms.",
                             bg: "bg-[#FFF1F2]",
+                            img: "/bitcoin.jpg"
                         },
                         {
                             title: "Enterprise Applications",
                             desc: "Robust enterprise software to streamline operations.",
                             bg: "bg-[#F8FAFC]",
+                            img: "/Enterprise.jpg"
                         },
                         // Duplicates for seamless loop
                         {
                             title: "Digital Transformation",
                             desc: "Modernizing enterprise systems to drive agility and growth.",
                             bg: "bg-[#EEF2FF]",
+                            img: "/images/enterprise_digital_transformation_abstract_1767989394636.png"
                         },
                         {
                             title: "Cloud & Infrastructure",
                             desc: "Scalable, secure cloud architectures for modern businesses.",
                             bg: "bg-[#ECFEFF]",
+                            img: "/images/cloud_engineering_platforms_abstract_1767989449348.png"
                         },
                         {
                             title: "Data, Analytics & AI",
                             desc: "Turning data into intelligent, actionable insights.",
                             bg: "bg-[#FFFBEB]",
+                            img: "/AI.jpg"
                         },
                         {
                             title: "Cybersecurity & Risk",
                             desc: "Protecting digital assets with proactive security strategies.",
                             bg: "bg-[#ECFDF5]",
+                            img: "/cyber.jpg"
                         },
                         {
                             title: "Blockchain, Crypto & Web3",
                             desc: "Decentralized solutions for next-generation platforms.",
                             bg: "bg-[#FFF1F2]",
+                            img: "/bitcoin.jpg"
                         },
                         {
                             title: "Enterprise Applications",
                             desc: "Robust enterprise software to streamline operations.",
                             bg: "bg-[#F8FAFC]",
+                            img: "/Enterprise.jpg"
                         },
                     ].map((item, index) => (
                         <div
                             key={index}
                             className={`
-                                min-w-[360px] h-[280px] rounded-[32px]
+                                min-w-[360px] h-[340px] rounded-[32px]
                                 ${item.bg} backdrop-blur-md
                                 shadow-[0_8px_24px_rgba(0,0,0,0.08)]
-                                flex flex-col justify-end items-start
-                                p-8 text-left
+                                flex flex-col overflow-hidden
                             `}
                         >
-                            <h3 className="text-2xl font-bold text-slate-900 mb-3 leading-tight">
-                                {item.title}
-                            </h3>
-                            <p className="text-base text-slate-600 leading-snug font-medium">
-                                {item.desc}
-                            </p>
+                            <div className="relative w-full h-[160px]">
+                                <Image
+                                    src={item.img}
+                                    alt={item.title}
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="p-6 flex flex-col justify-center flex-grow">
+                                <h3 className="text-xl font-bold text-slate-900 mb-2 leading-tight">
+                                    {item.title}
+                                </h3>
+                                <p className="text-sm text-slate-600 leading-snug font-medium line-clamp-2">
+                                    {item.desc}
+                                </p>
+                            </div>
                         </div>
                     ))}
 

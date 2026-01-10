@@ -11,15 +11,29 @@ export default function AboutIntro() {
                     <div className="relative h-[480px] w-full max-w-lg mx-auto lg:mx-0 order-1 lg:order-1">
 
                         {/* Secondary Card (Back - Top Left) */}
-                        <div className="absolute top-0 left-0 w-[85%] h-[340px] bg-gradient-to-br from-slate-100 to-slate-200 rounded-[2.5rem] shadow-lg transform -rotate-2">
-                            <div className="absolute inset-0 bg-white/40 opacity-50"></div>
+                        <div
+                            className="absolute top-0 left-0 w-[85%] h-[340px] rounded-[2.5rem] shadow-lg transform -rotate-2 overflow-hidden"
+                            style={{
+                                backgroundImage: "url('/cyber.jpg')",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat"
+                            }}
+                        >
+                            <div className="absolute inset-0 bg-black/40"></div>
                         </div>
 
                         {/* Primary Card (Front - Bottom Right) */}
-                        <div className="absolute bottom-0 right-0 w-[85%] h-[360px] bg-gradient-to-br from-[#0F172A] to-[#1E3A8A] rounded-[2.5rem] shadow-2xl z-10 overflow-hidden transform rotate-1">
-                            {/* Subtle Pattern/Texture */}
-                            <div className="absolute inset-0 bg-white/5 opacity-10 pattern-grid-lg"></div>
-                            <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full"></div>
+                        <div
+                            className="absolute bottom-0 right-0 w-[85%] h-[360px] rounded-[2.5rem] shadow-2xl z-10 overflow-hidden transform rotate-1"
+                            style={{
+                                backgroundImage: "url('/who1.jpg')",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat"
+                            }}
+                        >
+                            <div className="absolute inset-0 bg-black/20"></div>
                         </div>
 
                     </div>

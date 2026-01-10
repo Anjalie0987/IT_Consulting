@@ -1,35 +1,42 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const services = [
     {
         title: "Digital & Cloud Transformation",
         desc: "Accelerating business innovation through secure, scalable, and cloud-native strategies tailored for the enterprise.",
-        pattern: "bg-gradient-to-br from-blue-50 to-blue-100"
+        pattern: "bg-gradient-to-br from-blue-50 to-blue-100",
+        img: "/images/cloud_engineering_platforms_abstract_1767989449348.png"
     },
     {
         title: "Data, Analytics & AI",
         desc: "Turning complex data ecosystems into actionable insights with advanced artificial intelligence and analytics.",
-        pattern: "bg-gradient-to-br from-indigo-50 to-indigo-100"
+        pattern: "bg-gradient-to-br from-indigo-50 to-indigo-100",
+        img: "/AI.jpg"
     },
     {
         title: "Enterprise Applications",
         desc: "Streamlining core operations with robust, integrated enterprise software solutions and automation.",
-        pattern: "bg-gradient-to-br from-slate-50 to-slate-100"
+        pattern: "bg-gradient-to-br from-slate-50 to-slate-100",
+        img: "/Enterprise.jpg"
     },
     {
         title: "Cybersecurity & Compliance",
         desc: "Protecting your digital assets and reputation with rigorous security frameworks and proactive compliance.",
-        pattern: "bg-gradient-to-br from-gray-100 to-gray-200"
+        pattern: "bg-gradient-to-br from-gray-100 to-gray-200",
+        img: "/cyber.jpg"
     },
     {
         title: "Tech Strategy & Architecture",
         desc: "Future-proofing your business with resilient, scalable IT roadmaps that align with long-term goals.",
-        pattern: "bg-gradient-to-br from-blue-900 to-slate-900 opacity-10"
+        pattern: "bg-gradient-to-br from-blue-900 to-slate-900 opacity-10",
+        img: "/images/enterprise_digital_transformation_abstract_1767989394636.png"
     },
     {
         title: "Managed Services",
         desc: "Ensuring operational excellence, reliability, and continuous improvement for your entire IT estate.",
-        pattern: "bg-gradient-to-br from-white to-gray-50 border-b"
+        pattern: "bg-gradient-to-br from-white to-gray-50 border-b",
+        img: "/images/cloud_engineering_platforms_abstract_1767989449348.png"
     },
 ];
 
@@ -57,10 +64,14 @@ export default function AboutWhatWeDo() {
                             className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full"
                         >
                             {/* A. Top Media Area (Image Holder) */}
-                            <div className={`h-48 w-full relative overflow-hidden ${service.pattern || "bg-slate-100"}`}>
-                                {/* Abstract pattern placeholder - using gradients/patterns as requested "Neutral placeholder" */}
-                                <div className="absolute inset-0 opacity-30 pattern-grid-lg"></div>
-                                <div className="absolute inset-0 bg-white/10"></div>
+                            <div className="h-48 w-full relative overflow-hidden bg-slate-100">
+                                <Image
+                                    src={service.img}
+                                    alt={service.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/5"></div>
                             </div>
 
                             {/* B. Card Content Area */}
@@ -72,15 +83,7 @@ export default function AboutWhatWeDo() {
                                     {service.desc}
                                 </p>
 
-                                {/* C. Card Action (Minimal) */}
-                                <div className="flex justify-end mt-auto pt-4 border-t border-gray-50">
-                                    <span className="text-sm font-semibold text-blue-600 group-hover:text-blue-700 flex items-center transition-colors cursor-pointer">
-                                        Explore
-                                        <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
-                                    </span>
-                                </div>
+
                             </div>
                         </div>
                     ))}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navigation } from "../data/navigation";
 
 export default function Header() {
@@ -11,6 +12,14 @@ export default function Header() {
     const [searchTerm, setSearchTerm] = useState("");
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
+
+    const pathname = usePathname();
+
+    // Close menus when route changes
+    useEffect(() => {
+        setMobileMenuOpen(false);
+        setActiveDropdown(null);
+    }, [pathname]);
 
     // Static suggestion data
     const suggestionList = [
@@ -167,18 +176,34 @@ export default function Header() {
                                                 {item.megaMenu.columns.map((col, idx) => (
                                                     <div key={idx} className="flex flex-col space-y-5">
                                                         {col.title && (
-                                                            <h3 className="text-sm font-bold text-gray-900 tracking-wider uppercase border-b border-gray-200 pb-2">
-                                                                {col.title}
-                                                            </h3>
+                                                            col.href ? (
+                                                                <Link
+                                                                    href={col.href}
+                                                                    className="block group/title"
+                                                                    onClick={() => setActiveDropdown(null)}
+                                                                >
+                                                                    <h3 className="text-sm font-bold text-gray-900 tracking-wider uppercase border-b border-gray-200 pb-2 hover:text-[#1F4ED8] transition-colors flex items-center justify-between">
+                                                                        {col.title}
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 opacity-0 -translate-x-2 group-hover/title:opacity-100 group-hover/title:translate-x-0 transition-all duration-200">
+                                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                                                        </svg>
+                                                                    </h3>
+                                                                </Link>
+                                                            ) : (
+                                                                <h3 className="text-sm font-bold text-gray-900 tracking-wider uppercase border-b border-gray-200 pb-2">
+                                                                    {col.title}
+                                                                </h3>
+                                                            )
                                                         )}
                                                         <ul role="list" className={item.label === "Who We Are" ? "space-y-6" : "space-y-3"}>
                                                             {col.links.map((link) => (
                                                                 <li key={link.label}>
                                                                     <Link
                                                                         href={link.href}
+                                                                        onClick={() => setActiveDropdown(null)}
                                                                         className={`block transition-all duration-200 ${item.label === "Who We Are"
-                                                                                ? "text-base font-semibold text-gray-800 hover:text-blue-700 hover:translate-x-1"
-                                                                                : "text-sm text-gray-600 hover:text-blue-700 hover:underline hover:decoration-blue-700/30 hover:underline-offset-4"
+                                                                            ? "text-base font-semibold text-gray-800 hover:text-blue-700 hover:translate-x-1"
+                                                                            : "text-sm text-gray-600 hover:text-blue-700 hover:underline hover:decoration-blue-700/30 hover:underline-offset-4"
                                                                             }`}
                                                                     >
                                                                         {link.label}

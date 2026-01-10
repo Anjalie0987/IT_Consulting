@@ -139,15 +139,7 @@ export default function AboutWhyChooseUs() {
                                             </p>
                                         </div>
 
-                                        {/* Footer / Button */}
-                                        <div className="flex items-center">
-                                            <button className="px-5 py-2 rounded-full bg-white/10 text-white text-xs font-semibold backdrop-blur-sm hover:bg-white/20 transition-colors flex items-center gap-2">
-                                                Learn More
-                                                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                                </svg>
-                                            </button>
-                                        </div>
+
                                     </div>
 
                                     {/* Dark Overlay for non-active cards (extra dimming) */}

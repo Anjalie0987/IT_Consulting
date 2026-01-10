@@ -212,7 +212,7 @@ export default function ContactForm() {
                                     className="mt-1 h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                                 />
                                 <label htmlFor="terms" className="text-sm text-gray-500 leading-relaxed">
-                                    I have read and accept the <a href="#" className="text-blue-600 underline hover:text-blue-800">Terms of Use</a>. Please read our <a href="#" className="text-blue-600 underline hover:text-blue-800">privacy statement</a> to understand how we plan to use your personal information.
+                                    I have read and accept the <a href="/policies" className="text-blue-600 underline hover:text-blue-800">Terms of Use</a>. Please read our <a href="/policies" className="text-blue-600 underline hover:text-blue-800">privacy statement</a> to understand how we plan to use your personal information.
                                 </label>
                             </div>
 

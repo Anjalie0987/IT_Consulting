@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import PerspectiveModal from "./PerspectiveModal";
 
@@ -56,7 +57,7 @@ export default function KeyPerspectives() {
         {
             label: "ENTERPRISE STRATEGY",
             heading: "Strategy fails when technology and business move in different directions.",
-            bgImage: "/images/enterprise_strategy_abstract_1767990010922.png",
+            bgImage: "/images/enterprise_digital_transformation_abstract_1767989394636.png",
             modalTitle: "Strategic Alignment in a Digital-First World",
             content: [
                 "In many organizations, technology strategy and business strategy operate in silos, leading to friction, inefficiency, and missed opportunities. True strategic alignment requires a unified vision where technology is seen not just as an enabler, but as a core driver of business value.",
@@ -67,7 +68,7 @@ export default function KeyPerspectives() {
         {
             label: "CLOUD & INFRASTRUCTURE",
             heading: "Cloud transformation is a business decision — not an IT migration.",
-            bgImage: "/images/cloud_infrastructure_abstract_1767990028008.png",
+            bgImage: "/images/data_analytics_decision_making_abstract_1767989416149.png",
             modalTitle: "Cloud as a Catalyst for Business Agility",
             content: [
                 "Treating cloud adoption as a mere data center migration misses the point. The true value of cloud lies in its ability to unlock specific business capabilities—from faster time-to-market and elastic scalability to advanced data services.",
@@ -78,7 +79,7 @@ export default function KeyPerspectives() {
         {
             label: "OPERATING MODELS",
             heading: "New technology delivers value only when operating models evolve with it.",
-            bgImage: "/images/operating_models_abstract_1767990044084.png",
+            bgImage: "/images/cybersecurity_resilience_abstract_1767989433371.png",
             modalTitle: "Evolving Operating Models for the Digital Age",
             content: [
                 "Implementing modern tools without updating how teams work is a recipe for failure. To realize the full potential of digital investments, organizations must evolve their operating models to embrace cross-functional collaboration, agile workflows, and product-centric delivery.",
@@ -89,7 +90,7 @@ export default function KeyPerspectives() {
         {
             label: "INNOVATION & CHANGE",
             heading: "Innovation succeeds when organizations design for change, not certainty.",
-            bgImage: "/images/innovation_change_abstract_1767990058505.png",
+            bgImage: "/images/cloud_engineering_platforms_abstract_1767989449348.png",
             modalTitle: "Designing for Continuous Innovation",
             content: [
                 "In a rapidly changing landscape, the ability to adapt is more valuable than rigid long-term planning. Innovation isn't just about 'labs' or experiments; it's about building a culture and capability that can systematically test, learn, and scale new ideas.",
@@ -121,38 +122,33 @@ export default function KeyPerspectives() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ y: -5, scale: 1.02 }}
+                            whileHover={{ y: -5 }}
                             onClick={() => setSelectedPerspective(item)}
-                            className="group relative h-[400px] w-full rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300"
+                            className="group relative flex flex-col h-full bg-white rounded-2xl overflow-hidden cursor-pointer shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300"
                         >
-                            {/* Background Image - using style for arbitrary values or Next.js Image if preferred, but img tag is robust for simple copy */}
-                            <div className="absolute inset-0 bg-gray-800">
-                                {/* Fallback/Placeholder background */}
-                                <img
+                            {/* Top Image Section */}
+                            <div className="relative h-56 w-full overflow-hidden bg-gray-100">
+                                <Image
                                     src={item.bgImage}
                                     alt={item.label}
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80"
-                                    onError={(e) => {
-                                        e.target.style.display = 'none'; // Hide broken image
-                                        e.target.parentElement.style.background = 'linear-gradient(to bottom right, #1f2937, #111827)';
-                                    }}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
+                                {/* Light Overlay */}
+                                <div className="absolute inset-0 bg-black/5"></div>
                             </div>
 
-                            {/* Dark Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
-
-                            {/* Card Content Overlay */}
-                            <div className="absolute inset-0 p-8 flex flex-col justify-end items-start text-left">
+                            {/* Content Section */}
+                            <div className="p-8 flex flex-col flex-grow">
                                 {/* Label */}
-                                <div className="mb-4">
-                                    <span className="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest rounded-full">
+                                <div className="mb-3">
+                                    <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600">
                                         {item.label}
                                     </span>
                                 </div>
 
                                 {/* Heading */}
-                                <h3 className="text-white text-2xl font-bold leading-tight mb-6">
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 leading-tight mb-4 group-hover:text-blue-600 transition-colors">
                                     {item.heading}
                                 </h3>
                             </div>

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -58,44 +58,51 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* COLUMN 2 — COMPANY & INSIGHTS */}
+                    {/* COLUMN 2 — COMPANY */}
                     <div>
                         <h3 className="font-semibold text-white tracking-wide mb-6">Company</h3>
-                        <ul className="space-y-3">
-                            <li><Link href="/about" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">About Us</Link></li>
-                            <li><Link href="/about/leadership" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Leadership</Link></li>
-                            <li><Link href="/success-stories" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Success Stories</Link></li>
-                            <li><Link href="/careers" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Careers</Link></li>
-                            <li><Link href="/news" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">News & Media</Link></li>
-                        </ul>
-
-                        <h3 className="font-semibold text-white tracking-wide mt-8 mb-6">Insights</h3>
-                        <ul className="space-y-3">
-                            <li><Link href="/insights" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Insights Home</Link></li>
+                        <ul className="space-y-4">
+                            {[
+                                { label: "About Us", href: "/about" },
+                                { label: "What We Do", href: "/what-we-do/strategy-consulting" },
+                                { label: "Industries", href: "/industries/financial-regulated" },
+                                { label: "Insights", href: "/insights" },
+                                { label: "Careers", href: "/careers" },
+                            ].map(({ label, href }) => (
+                                <li key={label}>
+                                    <Link
+                                        href={href}
+                                        className="text-sm text-slate-400 hover:text-white transition-colors duration-300 inline-block relative group"
+                                    >
+                                        {label}
+                                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    {/* COLUMN 3 — WHAT WE DO & INDUSTRIES */}
+                    {/* COLUMN 3 — RESOURCES */}
                     <div>
-                        <h3 className="font-semibold text-white tracking-wide mb-6">What We Do</h3>
-                        <ul className="space-y-3">
-                            <li><Link href="/services/it-consulting" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">IT Consulting</Link></li>
-                            <li><Link href="/services/digital-transformation" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Digital Transformation</Link></li>
-                            <li><Link href="/services/cloud" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Cloud & Infrastructure</Link></li>
-                            <li><Link href="/services/data-ai" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Data, Analytics & AI</Link></li>
-                            <li><Link href="/services/cybersecurity" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Cybersecurity & Risk</Link></li>
-                            <li><Link href="/services/blockchain" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Blockchain / Crypto / Web3</Link></li>
-                        </ul>
-
-                        <h3 className="font-semibold text-white tracking-wide mt-8 mb-6">Industries</h3>
-                        <ul className="space-y-3">
-                            <li><Link href="/industries/banking" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Banking & Financial Services</Link></li>
-                            <li><Link href="/industries/healthcare" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Healthcare & Life Sciences</Link></li>
-                            <li><Link href="/industries/retail" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Retail & E-Commerce</Link></li>
-                            <li><Link href="/industries/manufacturing" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Manufacturing</Link></li>
-                            <li><Link href="/industries/logistics" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Logistics & Supply Chain</Link></li>
-                            <li><Link href="/industries/education" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Education</Link></li>
-                            <li><Link href="/industries/public-sector" className="text-sm text-slate-400 hover:text-white transition-colors duration-300">Public Sector</Link></li>
+                        <h3 className="font-semibold text-white tracking-wide mb-6">Resources</h3>
+                        <ul className="space-y-4">
+                            {[
+                                { label: "Contact Us", href: "/contact" },
+                                { label: "Locations", href: "/contact" },
+                                { label: "Case Studies", href: "/success-stories" },
+                                { label: "Privacy Policy", href: "/policies" },
+                                { label: "Terms of Use", href: "/policies" },
+                            ].map(({ label, href }) => (
+                                <li key={label}>
+                                    <Link
+                                        href={href}
+                                        className="text-sm text-slate-400 hover:text-white transition-colors duration-300 inline-block relative group"
+                                    >
+                                        {label}
+                                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -118,10 +125,18 @@ export default function Footer() {
                         © 2026 IT Consulting. All rights reserved.
                     </p>
                     <div className="flex space-x-6">
-                        {['Privacy', 'Cookies', 'Accessibility'].map((item) => (
-                            <a key={item} href="#" className="text-xs text-white/60 hover:text-white transition-colors duration-300">
-                                {item}
-                            </a>
+                        {[
+                            { label: "Privacy", href: "/policies" },
+                            { label: "Cookies", href: "/policies" },
+                            { label: "Accessibility", href: "/policies" },
+                        ].map(({ label, href }) => (
+                            <Link
+                                key={label}
+                                href={href}
+                                className="text-xs text-white/60 hover:text-white transition-colors duration-300"
+                            >
+                                {label}
+                            </Link>
                         ))}
                     </div>
                 </div>

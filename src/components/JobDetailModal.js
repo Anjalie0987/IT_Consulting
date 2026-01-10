@@ -40,13 +40,29 @@ export default function JobDetailModal({ job, onClose }) {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setFormStatus("submitting");
-        // Simulate API call
-        setTimeout(() => {
+
+        try {
+            const formData = new FormData(e.target);
+
+            const response = await fetch("/api/job-apply", {
+                method: "POST",
+                body: formData,
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || "Submission failed");
+            }
+
             setFormStatus("success");
-        }, 1500);
+        } catch (error) {
+            console.error(error);
+            setFormStatus("error");
+        }
     };
 
     if (!job) return null;
@@ -129,31 +145,32 @@ export default function JobDetailModal({ job, onClose }) {
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                                    <input type="hidden" name="jobTitle" value={job.title} />
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
                                             <label className="block text-sm font-semibold text-gray-700 mb-1">First Name *</label>
-                                            <input required type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="First Name" />
+                                            <input required name="firstName" type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="First Name" />
                                         </div>
                                         <div>
                                             <label className="block text-sm font-semibold text-gray-700 mb-1">Last Name *</label>
-                                            <input required type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="Last Name" />
+                                            <input required name="lastName" type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="Last Name" />
                                         </div>
                                     </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                         <div>
                                             <label className="block text-sm font-semibold text-gray-700 mb-1">Email Address *</label>
-                                            <input required type="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="john@example.com" />
+                                            <input required name="email" type="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="john@example.com" />
                                         </div>
                                         <div>
                                             <label className="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
-                                            <input type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="+1 (555) 000-0000" />
+                                            <input name="phone" type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="+1 (555) 000-0000" />
                                         </div>
                                     </div>
 
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Location</label>
-                                        <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="City, Country" />
+                                        <input name="location" type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="City, Country" />
                                     </div>
 
                                     <div>
@@ -161,6 +178,7 @@ export default function JobDetailModal({ job, onClose }) {
                                         <div className="relative">
                                             <input
                                                 required
+                                                name="resume"
                                                 type="file"
                                                 accept=".pdf,.doc,.docx"
                                                 onChange={handleFileChange}
@@ -176,6 +194,12 @@ export default function JobDetailModal({ job, onClose }) {
                                             )}
                                         </div>
                                     </div>
+
+                                    {formStatus === "error" && (
+                                        <p className="text-red-600 font-medium">
+                                            Something went wrong. Please try again.
+                                        </p>
+                                    )}
 
                                     <button
                                         disabled={formStatus === "submitting"}
