@@ -1,0 +1,93 @@
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.tryLock(10000);
+
+  try {
+    // 1. Logging
+    Logger.log("Recieved Request: " + JSON.stringify(e));
+
+    // 2. Parse Data
+    var data = JSON.parse(e.postData.contents);
+    var jobTitle = data.jobTitle;
+    var firstName = data.firstName;
+    var lastName = data.lastName;
+    var email = data.email;
+    var phone = data.phone;
+    var location = data.location;
+    var resumeFileName = data.resumeFileName;
+    var resumeBase64 = data.resumeBase64;
+
+    Logger.log("Parsed Data - Job: " + jobTitle + ", Name: " + firstName + " " + lastName);
+
+    // 3. Save Resume to Drive
+    var folderName = "Job_Resumes";
+    var folders = DriveApp.getFoldersByName(folderName);
+    var folder;
+
+    if (folders.hasNext()) {
+      folder = folders.next();
+    } else {
+      folder = DriveApp.createFolder(folderName);
+    }
+
+    var decodedResume = Utilities.base64Decode(resumeBase64);
+    var blob = Utilities.newBlob(decodedResume, MimeType.PDF, resumeFileName); // Defaulting to PDF, or detect type if sent
+    // Better: Detect type from fileName or send mimeType in payload
+    // If name ends in .docx, change mime type
+    if (resumeFileName.toLowerCase().endsWith(".docx") || resumeFileName.toLowerCase().endsWith(".doc")) {
+        blob.setContentType(MimeType.MICROSOFT_WORD);
+    }
+
+    var file = folder.createFile(blob);
+    var fileUrl = file.getUrl();
+
+    Logger.log("Resume Saved: " + fileUrl);
+
+    // 4. Save to Google Sheet
+    var sheetName = "Job Applications";
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet = ss.getSheetByName(sheetName);
+
+    if (!sheet) {
+      sheet = ss.insertSheet(sheetName);
+      // Add Headers
+      sheet.appendRow(["Timestamp", "Job Title", "First Name", "Last Name", "Email", "Phone", "Location", "Resume URL"]);
+    }
+
+    sheet.appendRow([
+      new Date(),
+      jobTitle,
+      firstName,
+      lastName,
+      email,
+      phone,
+      location,
+      fileUrl
+    ]);
+
+    Logger.log("Sheet Updated");
+
+    // 5. Send Email Notification
+    var emailRecipient = "accordantconsultants@gmail.com";
+    var subject = "New Job Application: " + firstName + " " + lastName;
+    var body = "New application received for " + jobTitle + ".\n\n" +
+               "Name: " + firstName + " " + lastName + "\n" +
+               "Email: " + email + "\n" +
+               "Phone: " + phone + "\n" +
+               "Location: " + location + "\n" +
+               "Resume: " + fileUrl;
+
+    MailApp.sendEmail(emailRecipient, subject, body);
+    Logger.log("Email Sent to: " + emailRecipient);
+
+    return ContentService.createTextOutput(JSON.stringify({ "status": "success", "success": true, "message": "Application processed successfully" }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (e) {
+    Logger.log("Error: " + e.toString());
+    return ContentService.createTextOutput(JSON.stringify({ "status": "error", "success": false, "message": e.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
+  }
+}

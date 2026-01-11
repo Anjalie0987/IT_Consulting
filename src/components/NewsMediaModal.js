@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-export default function NewsMediaModal({ item, onClose }) {
+export default function NewsMediaModal({ item, onClose, isOpen }) {
     const modalRef = useRef(null);
 
     // Extract YouTube ID
@@ -23,22 +23,28 @@ export default function NewsMediaModal({ item, onClose }) {
                 onClose();
             }
         };
-        document.body.style.overflow = "hidden";
-        document.addEventListener("mousedown", handleClickOutside);
+
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
             document.body.style.overflow = "unset";
         };
-    }, [onClose]);
+    }, [isOpen, onClose]);
 
     // Handle ESC key
     useEffect(() => {
         const handleEsc = (event) => {
             if (event.key === "Escape") onClose();
         };
-        window.addEventListener("keydown", handleEsc);
+        if (isOpen) {
+            window.addEventListener("keydown", handleEsc);
+        }
         return () => window.removeEventListener("keydown", handleEsc);
-    }, [onClose]);
+    }, [isOpen, onClose]);
 
     if (!item || !videoId) return null;
 
@@ -86,7 +92,7 @@ export default function NewsMediaModal({ item, onClose }) {
                 <div className="p-6 md:p-8 bg-white text-left">
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">{item.title}</h2>
                     <div className="flex items-center gap-3 text-sm text-gray-500 font-medium mb-4">
-                        <span>{item.publishDate}</span>
+                        <span>{new Date(item.publishDate).toLocaleDateString()}</span>
                         {item.category && (
                             <>
                                 <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
