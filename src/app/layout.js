@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Enterprise Solutions",
+  title: "Accordant Consultants",
   description: "Global consulting and technology services",
 };
 

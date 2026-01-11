@@ -72,8 +72,8 @@ export default function PoliciesPage() {
                                         key={item.id}
                                         onClick={() => scrollToSection(item.id)}
                                         className={`block text-sm font-medium transition-colors duration-200 text-left w-full ${activeSection === item.id
-                                                ? "text-blue-600 border-l-2 border-blue-600 -ml-[18px] pl-[14px]"
-                                                : "text-gray-500 hover:text-gray-900"
+                                            ? "text-blue-600 border-l-2 border-blue-600 -ml-[18px] pl-[14px]"
+                                            : "text-gray-500 hover:text-gray-900"
                                             }`}
                                     >
                                         {item.label}
@@ -296,7 +296,7 @@ export default function PoliciesPage() {
                             <div className="space-y-4 text-sm md:text-base text-gray-600">
                                 <p>If you have questions or concerns about these policies or your data, contact us:</p>
                                 <div className="space-y-1">
-                                    <p><strong className="text-gray-900">Email:</strong> privacy@aconsultants.in</p>
+                                    <p><strong className="text-gray-900">Email:</strong>Hello@aconsultants.in</p>
                                     <p><strong className="text-gray-900">Phone:</strong> +91-9910219236</p>
                                     <p><strong className="text-gray-900">Address:</strong> Accordant Consultants, Gurugram, India</p>
                                 </div>

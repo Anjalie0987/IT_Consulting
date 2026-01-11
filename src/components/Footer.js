@@ -88,7 +88,7 @@ export default function Footer() {
                         <ul className="space-y-4">
                             {[
                                 { label: "Contact Us", href: "/contact" },
-                                { label: "Locations", href: "/contact" },
+
                                 { label: "Case Studies", href: "/success-stories" },
                                 { label: "Privacy Policy", href: "/policies" },
                                 { label: "Terms of Use", href: "/policies" },
@@ -128,7 +128,7 @@ export default function Footer() {
                         {[
                             { label: "Privacy", href: "/policies" },
                             { label: "Cookies", href: "/policies" },
-                            { label: "Accessibility", href: "/policies" },
+
                         ].map(({ label, href }) => (
                             <Link
                                 key={label}
