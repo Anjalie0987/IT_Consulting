@@ -5,13 +5,13 @@ export const runtime = 'nodejs';
 
 export async function POST(request) {
     try {
-        // 1. Method Guard (Redundant in App Router export name, but good practice if logic extracted)
-        // In Next.js App Router, only the exported 'POST' function handles POST requests.
+        console.log('----------------------------------------------------------------');
+        console.log('🚀 [API] Job Application Request Started');
 
-        // 2. Parse FormData
+        // 1. Parse FormData
         const formData = await request.formData();
+        console.log('📦 [API] FormData received. Keys:', Array.from(formData.keys()));
 
-        // Extract fields
         // Extract fields
         const jobTitle = formData.get('jobTitle')?.toString().trim();
         const firstName = formData.get('firstName')?.toString().trim();
@@ -21,9 +21,11 @@ export async function POST(request) {
         const location = formData.get('location')?.toString().trim() || '';
         const resume = formData.get('resume');
 
-        // 3. Validation
-        // Required fields
+        console.log('👤 [API] Applicant:', { firstName, lastName, email, jobTitle });
+
+        // 2. Validation
         if (!jobTitle || !firstName || !lastName || !email || !resume) {
+            console.error('❌ [API] Missing required fields');
             return NextResponse.json(
                 { success: false, message: 'Validation failed: Missing required fields' },
                 { status: 400 }
@@ -32,14 +34,18 @@ export async function POST(request) {
 
         // File validation
         if (!(resume instanceof File)) {
+            console.error('❌ [API] Resume is not a file object');
             return NextResponse.json(
                 { success: false, message: 'Validation failed: Resume must be a file' },
                 { status: 400 }
             );
         }
 
+        console.log(`📄 [API] Resume Details: Name=${resume.name}, Size=${resume.size} bytes, Type=${resume.type}`);
+
         const MAX_SIZE_MB = 5;
         if (resume.size > MAX_SIZE_MB * 1024 * 1024) {
+            console.error('❌ [API] File size exceeds limit');
             return NextResponse.json(
                 { success: false, message: 'Validation failed: File size exceeds 5MB' },
                 { status: 400 }
@@ -52,18 +58,21 @@ export async function POST(request) {
             'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
         ];
         if (!ALLOWED_TYPES.includes(resume.type)) {
+            console.error(`❌ [API] Invalid file type: ${resume.type}`);
             return NextResponse.json(
                 { success: false, message: 'Validation failed: Invalid file type. Only PDF and Word documents are allowed.' },
                 { status: 400 }
             );
         }
 
-        // 4. Convert File to Base64
+        // 3. Convert File to Base64
+        console.log('🔄 [API] Converting resume to Base64...');
         const arrayBuffer = await resume.arrayBuffer();
         const buffer = Buffer.from(arrayBuffer);
         const resumeBase64 = buffer.toString('base64');
+        console.log(`✅ [API] Base64 conversion complete. Length: ${resumeBase64.length}`);
 
-        // 5. Construct Payload
+        // 4. Construct Payload
         const payload = {
             jobTitle,
             firstName,
@@ -75,16 +84,18 @@ export async function POST(request) {
             resumeBase64,
         };
 
-        // 6. Forward to Google Apps Script
+        // 5. Forward to Google Apps Script
         const webhookUrl = process.env.GOOGLE_JOB_WEBHOOK_URL;
 
         if (!webhookUrl) {
-            console.error('Server Configuration Error: GOOGLE_JOB_WEBHOOK_URL is missing');
+            console.error('❌ [API] Server Configuration Error: GOOGLE_JOB_WEBHOOK_URL is missing in env');
             return NextResponse.json(
-                { success: false, message: 'Internal server error' },
+                { success: false, message: 'Internal server error: Webhook URL not configured' },
                 { status: 500 }
             );
         }
+
+        console.log(`📨 [API] Sending payload to Google Webhook... (URL length: ${webhookUrl.length})`);
 
         const response = await fetch(webhookUrl, {
             method: 'POST',
@@ -94,37 +105,51 @@ export async function POST(request) {
             body: JSON.stringify(payload),
         });
 
-        // 7. Handle Google Response
+        console.log(`📡 [API] Google Webhook Response Status: ${response.status} ${response.statusText}`);
+
+        const responseText = await response.text();
+        console.log(`📝 [API] Google Webhook Raw Response: ${responseText}`);
+
+        // 6. Handle Google Response
         if (!response.ok) {
-            console.error(`Google Webhook Error: ${response.status} ${response.statusText}`);
+            console.error(`❌ [API] Google Webhook Error: ${response.status}`);
             return NextResponse.json(
-                { success: false, message: 'Internal server error' },
+                { success: false, message: 'Internal server error: Webhook failed' },
                 { status: 500 }
             );
         }
 
-        // The Google Script returns { success: true/false, message: ... }
-        // We can parse it to check logic success, or just trust the 200 OK means it ran.
-        // However, our script returns 200 even for logic failures (caught by try/catch in GAS),
-        // so let's parse the JSON to be sure.
-        const googleResult = await response.json();
-
-        if (!googleResult.success) {
-            console.error('Google Webhook Logic Failure:', googleResult.message);
+        let googleResult;
+        try {
+            googleResult = JSON.parse(responseText);
+        } catch (e) {
+            console.error('❌ [API] Failed to parse Google JSON response:', e);
+            // Even if JSON parse fails, if status was 200, it might have worked but returned text.
+            // But usually we expect JSON.
+            // Let's assume failure if not JSON for better debugging.
             return NextResponse.json(
-                { success: false, message: 'Internal server error' },
+                { success: false, message: 'Internal server error: Invalid response from Google' },
                 { status: 500 }
             );
         }
 
-        // 8. Return Success
+        if (googleResult.status !== 'success' && !googleResult.success) { // Handle both 'status' and 'success' keys potentially
+            console.error('❌ [API] Google Webhook Logic Failure:', googleResult.message || googleResult);
+            return NextResponse.json(
+                { success: false, message: 'Internal server error: Google script returned error' },
+                { status: 500 }
+            );
+        }
+
+        // 7. Return Success
+        console.log('✅ [API] Application submitted successfully');
         return NextResponse.json(
             { success: true, message: 'Application submitted successfully' },
             { status: 200 }
         );
 
     } catch (error) {
-        console.error('API Error:', error);
+        console.error('🔥 [API] Critical Error:', error);
         return NextResponse.json(
             { success: false, message: 'Internal server error' },
             { status: 500 }
