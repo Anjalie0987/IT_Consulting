@@ -48,7 +48,7 @@ export default function AboutIntro() {
                             <div className="h-1 w-16 bg-blue-600 rounded-full"></div>
                         </div>
 
-                        <div className="space-y-8 text-lg text-gray-600 leading-relaxed font-light">
+                        <div className="space-y-8 text-lg text-gray-600 leading-relaxed font-light text-justify">
                             <p>
                                 Founded in 2014, we work at the intersection of technology, data, and business strategy to help organizations solve complex challenges and achieve sustainable growth.
                             </p>

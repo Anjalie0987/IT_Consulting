@@ -51,7 +51,7 @@ export default function AboutWhatWeDo() {
                         What We Do
                         <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-16 h-1 bg-blue-600 rounded-full"></span>
                     </h2>
-                    <p className="text-lg text-gray-600 leading-relaxed pt-4">
+                    <p className="text-lg text-gray-600 leading-relaxed pt-4 text-justify">
                         We deliver end-to-end technology solutions that drive efficiency, innovation, and competitive advantage for forward-thinking enterprises.
                     </p>
                 </div>
@@ -79,7 +79,7 @@ export default function AboutWhatWeDo() {
                                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3 text-left flex-grow">
+                                <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3 text-justify flex-grow">
                                     {service.desc}
                                 </p>
 

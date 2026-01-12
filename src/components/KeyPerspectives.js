@@ -104,11 +104,11 @@ export default function KeyPerspectives() {
             <div className="max-w-7xl mx-auto">
 
                 {/* Section Header */}
-                <div className="mb-16 border-b border-gray-200 pb-6">
+                <div className="mb-16 border-b border-gray-200 pb-6 text-center">
                     <h2 className="text-3xl font-bold text-gray-900 mb-3 tracking-tight">
                         Thinking That Drives Impact
                     </h2>
-                    <p className="text-xl text-gray-500 font-light max-w-3xl">
+                    <p className="text-xl text-gray-500 font-light max-w-3xl mx-auto">
                         Insight-led perspectives on the challenges leaders face as technology reshapes business.
                     </p>
                 </div>

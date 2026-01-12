@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import Hero from "../components/Hero";
 import Industries from "../components/Industries";
 import VideoSection from "../components/VideoSection";

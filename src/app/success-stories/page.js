@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import SuccessStoriesHero from '../../components/SuccessStoriesHero';
 import SuccessStoriesList from '../../components/SuccessStoriesList';
 import Footer from '../../components/Footer';

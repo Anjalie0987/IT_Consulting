@@ -77,7 +77,7 @@ export default function NewsMediaGrid({ items }) {
                                     <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
                                         {item.title}
                                     </h3>
-                                    <p className="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
+                                    <p className="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow text-justify">
                                         {item.summary}
                                     </p>
                                     <div className="text-blue-600 text-sm font-semibold flex items-center gap-2 mt-auto">

@@ -6,7 +6,7 @@ export default function PoliciesHero() {
     return (
         <section className="w-full bg-white pt-32 pb-16 border-b border-gray-100">
             <div className="w-full max-w-[1000px] mx-auto px-6 md:px-12">
-                <div className="max-w-3xl">
+                <div className="max-w-3xl mx-auto text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}

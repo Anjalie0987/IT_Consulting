@@ -71,7 +71,7 @@ export default function PerspectiveModal({ isOpen, onClose, title, content }) {
                         <div className="p-6 md:p-8 overflow-y-auto">
                             <div className="space-y-6 text-gray-600 text-lg leading-relaxed font-light">
                                 {content && content.map((paragraph, index) => (
-                                    <p key={index}>{paragraph}</p>
+                                    <p key={index} className="text-justify">{paragraph}</p>
                                 ))}
                             </div>
                         </div>

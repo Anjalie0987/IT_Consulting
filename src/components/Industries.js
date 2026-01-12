@@ -76,7 +76,7 @@ export default function Industries() {
                                         <h3 className="text-lg font-semibold text-slate-900 mb-2">
                                             {item.title}
                                         </h3>
-                                        <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                                        <p className="mt-3 text-sm leading-relaxed text-slate-600 text-justify">
                                             {item.desc}
                                         </p>
                                     </div>

@@ -58,7 +58,7 @@ export default function TechnologyExpertise() {
                             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] leading-snug mb-6">
                                 Our Expertise in Technology & Engineering
                             </h2>
-                            <p className="text-base text-slate-600 font-normal leading-relaxed max-w-md">
+                            <p className="text-base text-slate-600 font-normal leading-relaxed max-w-md text-justify">
                                 We design, build, and modernize technology platforms that form the backbone of modern enterprises. Our engineering approach focuses on scalability, security, and long-term maintainability—ensuring technology accelerates business outcomes, not complexity.
                             </p>
                         </div>
@@ -72,7 +72,7 @@ export default function TechnologyExpertise() {
                                     <h3 className="text-xl font-bold text-slate-900 mb-3">
                                         {item.title}
                                     </h3>
-                                    <p className="text-base leading-relaxed text-slate-600">
+                                    <p className="text-base leading-relaxed text-slate-600 text-justify">
                                         {item.description}
                                     </p>
                                 </div>

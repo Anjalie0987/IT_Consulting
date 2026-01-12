@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import OpeningsHero from '../../../components/OpeningsHero';
 import OpeningsList from '../../../components/OpeningsList';
 import Footer from '../../../components/Footer';

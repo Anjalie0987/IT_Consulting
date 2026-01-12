@@ -91,7 +91,7 @@ export default function Footer() {
 
                                 { label: "Case Studies", href: "/success-stories" },
                                 { label: "Privacy Policy", href: "/policies" },
-                                { label: "Terms of Use", href: "/policies" },
+
                             ].map(({ label, href }) => (
                                 <li key={label}>
                                     <Link
@@ -126,8 +126,7 @@ export default function Footer() {
                     </p>
                     <div className="flex space-x-6">
                         {[
-                            { label: "Privacy", href: "/policies" },
-                            { label: "Cookies", href: "/policies" },
+                            { label: "Privacy & Cookies", href: "/policies" },
 
                         ].map(({ label, href }) => (
                             <Link

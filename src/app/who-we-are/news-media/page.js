@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import NewsMediaHero from '../../../components/NewsMediaHero';
 import NewsMediaGrid from '../../../components/NewsMediaGrid';
 import Footer from '../../../components/Footer';

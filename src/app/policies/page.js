@@ -89,7 +89,7 @@ export default function PoliciesPage() {
                         {/* 2. PRIVACY POLICY */}
                         <section id="privacy-policy" className="scroll-mt-32">
                             <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-100">Privacy Policy</h2>
-                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600">
+                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600 text-justify">
                                 <p>
                                     At Accordant Consultants, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, share, and safeguard your information when you visit our website or engage with our services.
                                 </p>
@@ -155,7 +155,7 @@ export default function PoliciesPage() {
                         {/* 3. TERMS OF USE */}
                         <section id="terms-of-use" className="scroll-mt-32 pt-8 border-t border-gray-100">
                             <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-100">Terms of Use</h2>
-                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600">
+                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600 text-justify">
                                 <p>
                                     These Terms of Use govern your access to and use of the Accordant Consultants website. By using our site, you agree to comply with all terms, rules, and policies referenced here.
                                 </p>
@@ -186,7 +186,7 @@ export default function PoliciesPage() {
                         {/* 4. COOKIE POLICY */}
                         <section id="cookie-policy" className="scroll-mt-32 pt-8 border-t border-gray-100">
                             <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-100">Cookie Policy</h2>
-                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600">
+                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600 text-justify">
                                 <p>
                                     We use cookies to enhance your experience, understand usage patterns, and improve our services. This Cookie Policy explains what cookies are (small text files stored on your device) and how we use them.
                                 </p>
@@ -223,7 +223,7 @@ export default function PoliciesPage() {
                         {/* 5. ACCESSIBILITY STATEMENT */}
                         <section id="accessibility" className="scroll-mt-32 pt-8 border-t border-gray-100">
                             <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-100">Accessibility Statement</h2>
-                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600">
+                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600 text-justify">
                                 <p>
                                     Accordant Consultants is committed to accessibility for all users. We strive to ensure our site is navigable, understandable, and usable for people with a wide range of abilities.
                                 </p>
@@ -260,7 +260,7 @@ export default function PoliciesPage() {
                         {/* 6. DATA SECURITY & PROTECTION */}
                         <section id="data-security" className="scroll-mt-32 pt-8 border-t border-gray-100">
                             <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6 pb-2 border-b border-gray-100">Data Security & Protection</h2>
-                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600">
+                            <div className="space-y-6 text-sm md:text-base leading-relaxed text-gray-600 text-justify">
                                 <p>
                                     Protecting the data of our clients, partners, and visitors is a top priority. We implement industry-standard security measures including encryption, secure access controls, and monitoring to mitigate unauthorized access or data breaches.
                                 </p>

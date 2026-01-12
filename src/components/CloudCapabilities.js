@@ -20,7 +20,7 @@ export default function CloudCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Cloud Strategy & Readiness</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We help organizations assess their current infrastructure landscape and define a clear, actionable cloud strategy aligned with business goals. Our approach ensures cloud adoption is intentional, secure, and designed for long-term scalability—rather than driven by technology trends alone.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -36,7 +36,7 @@ export default function CloudCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             A clear, business-aligned cloud strategy that reduces risk, controls cost, and accelerates cloud adoption with confidence.
                         </p>
                     </div>
@@ -60,7 +60,7 @@ export default function CloudCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Cloud Architecture & Engineering</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We design and implement resilient, scalable cloud architectures that support modern workloads while meeting enterprise security and performance standards.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -76,7 +76,7 @@ export default function CloudCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Cloud platforms that are reliable, secure, and engineered to scale with business demand.
                         </p>
                     </div>
@@ -106,7 +106,7 @@ export default function CloudCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Cloud Migration & Modernization</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We help organizations modernize legacy environments and migrate workloads to the cloud with minimal disruption.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -122,7 +122,7 @@ export default function CloudCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             Modernized platforms that improve agility, reduce operational overhead, and unlock cloud value.
                         </p>
                     </div>
@@ -149,7 +149,7 @@ export default function CloudCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Cloud Operations, Security & Optimization</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We help organizations operate cloud platforms securely and efficiently at scale through governance, automation, and continuous optimization.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -165,7 +165,7 @@ export default function CloudCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Well-governed, cost-efficient cloud environments that remain secure and resilient over time.
                         </p>
                     </div>

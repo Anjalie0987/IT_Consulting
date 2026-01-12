@@ -48,7 +48,7 @@ export default function SuccessStoriesList({ stories }) {
                                     </span>
                                 </div>
 
-                                <p className="text-white text-lg font-medium leading-relaxed line-clamp-3 mb-6">
+                                <p className="text-white text-lg font-medium leading-relaxed line-clamp-3 mb-6 text-justify">
                                     {story.summary}
                                 </p>
 

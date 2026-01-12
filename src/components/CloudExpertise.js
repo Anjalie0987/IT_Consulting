@@ -34,7 +34,7 @@ export default function CloudExpertise() {
                             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] leading-snug mb-6">
                                 Our Expertise in Cloud & Infrastructure
                             </h2>
-                            <p className="text-base text-slate-600 font-normal leading-relaxed max-w-md">
+                            <p className="text-base text-slate-600 font-normal leading-relaxed max-w-md text-justify">
                                 We help organizations design, modernize, and operate cloud and infrastructure platforms that are secure, resilient, and built for scale. Our expertise bridges strategy and execution—ensuring cloud adoption delivers reliability, performance, and long-term business value.
                             </p>
                         </div>
@@ -47,7 +47,7 @@ export default function CloudExpertise() {
                                 <h3 className="text-xl font-bold text-slate-900">
                                     {item.title}
                                 </h3>
-                                <p className="text-base leading-relaxed text-slate-600">
+                                <p className="text-base leading-relaxed text-slate-600 text-justify">
                                     {item.description}
                                 </p>
                             </div>

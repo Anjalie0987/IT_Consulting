@@ -20,7 +20,7 @@ export default function EmergingDigitalCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Startups & Digital Businesses</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We partner with startups and digital-first businesses to design scalable technology foundations, accelerate product development, and support growth from early traction to enterprise scale.
                             <br /><br />
                             Our approach balances speed, reliability, and long-term architectural discipline—ensuring innovation does not create future constraints.
@@ -38,7 +38,7 @@ export default function EmergingDigitalCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             Digital platforms that scale confidently, adapt quickly, and support sustained growth.
                         </p>
                     </div>
@@ -81,7 +81,7 @@ export default function EmergingDigitalCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-2">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Blockchain & Crypto Consulting</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We help organizations navigate blockchain and crypto initiatives with a focus on real-world utility, security, and regulatory awareness.
                             <br /><br />
                             Our consulting approach emphasizes architecture, risk management, and operational readiness—moving beyond experimentation toward sustainable adoption.
@@ -99,7 +99,7 @@ export default function EmergingDigitalCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Blockchain solutions that are secure, compliant, and designed for real-world use.
                         </p>
                     </div>
@@ -112,7 +112,7 @@ export default function EmergingDigitalCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Web3 & Decentralized Platforms</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We support Web3 and decentralized platform initiatives with a focus on scalability, security, and integration with existing enterprise ecosystems.
                             <br /><br />
                             Our work bridges decentralized technologies with operational, governance, and user-experience realities.
@@ -130,7 +130,7 @@ export default function EmergingDigitalCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             Decentralized platforms that are resilient, usable, and built for long-term adoption.
                         </p>
                     </div>

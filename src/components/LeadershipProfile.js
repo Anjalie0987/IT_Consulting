@@ -54,7 +54,7 @@ export default function LeadershipProfile() {
                             </div>
 
                             {/* Body Text */}
-                            <div className="space-y-6 text-gray-600 text-lg leading-relaxed mb-10">
+                            <div className="space-y-6 text-gray-600 text-lg leading-relaxed mb-10 text-justify">
                                 <p>
                                     Arpan Aggarwal is the Founder and Chief Executive Officer of Accordant Consultants, bringing over a decade of experience in building technology-driven solutions that solve complex business challenges.
                                 </p>
@@ -74,7 +74,7 @@ export default function LeadershipProfile() {
                             </div>
 
                             {/* Closing Paragraph */}
-                            <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+                            <div className="space-y-6 text-gray-600 text-lg leading-relaxed text-justify">
                                 <p>
                                     Under his guidance, Accordant Consultants has grown into a trusted consulting partner known for practical thinking, honest advice, and outcome-driven delivery. Arpan continues to focus on building strong teams, fostering innovation, and helping clients navigate change with confidence.
                                 </p>

@@ -34,7 +34,7 @@ export default function StrategyExpertise() {
                             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] leading-snug mb-6">
                                 Our Expertise in Strategy & Consulting
                             </h2>
-                            <p className="text-base text-slate-600 font-normal leading-relaxed max-w-md">
+                            <p className="text-base text-slate-600 font-normal leading-relaxed max-w-md text-justify">
                                 We help organizations define direction, make confident decisions, and execute strategy with clarity. Our consulting expertise bridges business objectives and technology execution—ensuring strategy translates into measurable results.
                             </p>
                         </div>
@@ -47,7 +47,7 @@ export default function StrategyExpertise() {
                                 <h3 className="text-xl font-bold text-slate-900">
                                     {item.title}
                                 </h3>
-                                <p className="text-base leading-relaxed text-slate-600">
+                                <p className="text-base leading-relaxed text-slate-600 text-justify">
                                     {item.description}
                                 </p>
                             </div>

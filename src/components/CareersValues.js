@@ -55,7 +55,7 @@ export default function CareersValues() {
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
                             Why Join Us
                         </h2>
-                        <p className="text-lg text-gray-600 leading-relaxed font-light">
+                        <p className="text-lg text-gray-600 leading-relaxed font-light text-justify">
                             We create an environment where people feel supported, challenged, and empowered to do their best work.
                         </p>
                     </div>
@@ -87,7 +87,7 @@ export default function CareersValues() {
                                         <h3 className="text-lg font-bold text-gray-900 mb-2">
                                             {value.title}
                                         </h3>
-                                        <p className="text-gray-500 leading-relaxed text-sm">
+                                        <p className="text-gray-500 leading-relaxed text-sm text-justify">
                                             {value.desc}
                                         </p>
                                     </div>

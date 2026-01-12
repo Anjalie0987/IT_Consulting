@@ -29,7 +29,7 @@ export default function AboutHero() {
                             Shaping Technology. <br />
                             <span className="text-blue-400">Solving What Matters.</span>
                         </h1>
-                        <p className="text-base md:text-lg text-gray-200 leading-relaxed max-w-2xl mb-6">
+                        <p className="text-base md:text-lg text-gray-200 leading-relaxed max-w-2xl mb-6 text-justify">
                             We are an intelligent IT consulting firm helping organizations solve complex business challenges through technology, strategy, and execution.
                         </p>
                     </div>
@@ -49,7 +49,7 @@ export default function AboutHero() {
                             </div>
                         </div>
 
-                        <p className="text-sm text-gray-300 leading-relaxed mb-4">
+                        <p className="text-sm text-gray-300 leading-relaxed mb-4 text-justify">
                             Founded in 2014, we partner with enterprises to design, build, and scale digital solutions that deliver lasting business impact.
                         </p>
                     </div>

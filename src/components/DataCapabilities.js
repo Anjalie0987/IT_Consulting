@@ -20,7 +20,7 @@ export default function DataCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Data Engineering</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We design and build scalable, reliable data platforms that form the foundation for analytics and AI. Our data engineering approach ensures data is accessible, trusted, and ready to support enterprise-wide decision-making.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -36,7 +36,7 @@ export default function DataCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             A resilient data foundation that enables faster insights, advanced analytics, and AI at scale.
                         </p>
                     </div>
@@ -60,7 +60,7 @@ export default function DataCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Business Intelligence</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We help organizations turn data into clear, actionable insights through intuitive dashboards and reporting that empower leaders to make confident, data-driven decisions.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -76,7 +76,7 @@ export default function DataCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             A single, trusted view of performance that drives alignment and accountability.
                         </p>
                     </div>
@@ -106,7 +106,7 @@ export default function DataCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">AI / ML Solutions</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We design and deploy AI and machine learning solutions that solve real business problems, focusing on practical, scalable, and responsible AI.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -122,7 +122,7 @@ export default function DataCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             AI solutions that improve efficiency, accuracy, and decision-making at scale.
                         </p>
                     </div>
@@ -149,7 +149,7 @@ export default function DataCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Advanced Analytics</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We apply advanced analytical techniques to uncover deeper insights, identify patterns, and support complex decision-making with confidence.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -165,7 +165,7 @@ export default function DataCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Deeper insights that help organizations anticipate change and act with confidence.
                         </p>
                     </div>

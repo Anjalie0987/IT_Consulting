@@ -53,7 +53,7 @@ export default function LeadershipPhilosophy() {
                         className="text-left"
                     >
                         <h3 className="text-xl font-bold text-gray-900 mb-4">Strategic Clarity</h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed text-justify">
                             We focus on understanding problems before proposing solutions, ensuring that every
                             decision aligns with long-term business goals.
                         </p>
@@ -68,7 +68,7 @@ export default function LeadershipPhilosophy() {
                         className="text-left"
                     >
                         <h3 className="text-xl font-bold text-gray-900 mb-4">Technology with Purpose</h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed text-justify">
                             We adopt modern technologies responsibly, prioritizing value, scalability, security,
                             and sustainability over trends.
                         </p>
@@ -83,7 +83,7 @@ export default function LeadershipPhilosophy() {
                         className="text-left"
                     >
                         <h3 className="text-xl font-bold text-gray-900 mb-4">Execution Excellence</h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed text-justify">
                             We believe strategy only matters when it is delivered with precision, accountability,
                             and measurable outcomes.
                         </p>

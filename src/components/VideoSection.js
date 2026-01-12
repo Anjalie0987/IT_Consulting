@@ -121,7 +121,7 @@ export default function VideoSection({ data }) {
                         <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
                             {data.heading}
                         </h2>
-                        <p className="text-base md:text-lg text-slate-300 max-w-lg leading-relaxed">
+                        <p className="text-base md:text-lg text-slate-300 max-w-lg leading-relaxed text-justify">
                             {data.description}
                         </p>
                     </motion.div>
@@ -134,7 +134,7 @@ export default function VideoSection({ data }) {
                         <h2 className="text-3xl font-bold text-white leading-tight mb-6">
                             {data.heading}
                         </h2>
-                        <p className="text-base text-slate-300 max-w-lg leading-relaxed">
+                        <p className="text-base text-slate-300 max-w-lg leading-relaxed text-justify">
                             {data.description}
                         </p>
                     </div>

@@ -20,7 +20,7 @@ export default function TechnologyCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Custom Software Engineering</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We design and build custom software solutions that are secure, scalable, and purpose-built for complex business environments. Our engineering approach focuses on long-term maintainability, performance at scale, and seamless integration with enterprise ecosystems.
                         </p>
                         <ul className="space-y-4">
@@ -80,7 +80,7 @@ export default function TechnologyCapabilities() {
                     {/* Text Content */}
                     <div className="order-2">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Platform & API Engineering</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We design and engineer resilient platforms and API ecosystems that enable scale, integration, and long-term adaptability. Our platform and API engineering services help organizations modernize architectures, unlock data, and build foundations that support rapid innovation without sacrificing reliability.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -96,7 +96,7 @@ export default function TechnologyCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             The result is a robust, integration-ready platform foundation that accelerates delivery, reduces complexity, and supports sustainable growth across the enterprise.
                         </p>
                     </div>
@@ -109,7 +109,7 @@ export default function TechnologyCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Modern Application Development</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We design and build modern, high-performance applications that deliver exceptional user experiences and adapt to evolving business needs. Our approach combines strong engineering foundations with product thinking to ensure scalability, security, and long-term maintainability.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -125,7 +125,7 @@ export default function TechnologyCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-400 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-400 leading-relaxed font-medium text-justify">
                             The result is modern, resilient applications that support rapid innovation while remaining stable, secure, and easy to evolve over time.
                         </p>
                     </div>
@@ -152,10 +152,10 @@ export default function TechnologyCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Legacy Modernization</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We help organizations modernize legacy systems that limit agility, scalability, and innovation. Our legacy modernization approach focuses on reducing risk while incrementally transforming critical systems into modern, cloud-ready, and maintainable platforms—without disrupting ongoing operations.
                         </p>
-                        <p className="text-lg text-gray-600 leading-relaxed mb-8 font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed mb-8 font-medium text-justify">
                             Rather than “rip and replace,” we apply a pragmatic modernization strategy that balances business continuity with long-term transformation goals.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -172,7 +172,7 @@ export default function TechnologyCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             The result is a modernized technology foundation that supports faster innovation, lower operational risk, and improved time-to-market—while preserving the business logic that matters most.
                         </p>
                     </div>

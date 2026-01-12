@@ -20,7 +20,7 @@ export default function FinancialRegulatedCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Banking & Financial Services</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We partner with banks and financial institutions to modernize core systems, strengthen security, and enable digital innovation—while maintaining regulatory compliance, operational resilience, and customer trust.
                             <br /><br />
                             Our experience spans retail banking, corporate banking, payments, lending platforms, and financial infrastructure modernization.
@@ -38,7 +38,7 @@ export default function FinancialRegulatedCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             Modern, resilient financial platforms that balance innovation with stability and regulatory confidence.
                         </p>
                     </div>
@@ -81,7 +81,7 @@ export default function FinancialRegulatedCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-2">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Healthcare & Life Sciences</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We support healthcare organizations and life sciences companies in building secure, interoperable, and compliant digital platforms that improve patient outcomes, operational efficiency, and data-driven decision-making.
                             <br /><br />
                             Our work spans providers, payers, health-tech platforms, and research-driven organizations operating in highly regulated environments.
@@ -99,7 +99,7 @@ export default function FinancialRegulatedCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Technology ecosystems that enable better care delivery, trusted data usage, and long-term scalability.
                         </p>
                     </div>
@@ -112,7 +112,7 @@ export default function FinancialRegulatedCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Public Sector & Government</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We work with public sector organizations and government bodies to modernize legacy systems, improve service delivery, and strengthen digital infrastructure—while ensuring security, transparency, and compliance.
                             <br /><br />
                             Our approach balances modernization with accountability, accessibility, and long-term sustainability.
@@ -130,7 +130,7 @@ export default function FinancialRegulatedCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             Future-ready public systems that improve service outcomes while maintaining trust and accountability.
                         </p>
                     </div>

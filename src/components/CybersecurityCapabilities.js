@@ -20,7 +20,7 @@ export default function CybersecurityCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Security Assessment & Audits</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We help organizations understand their security posture through structured, risk-based assessments that identify vulnerabilities and control gaps.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -36,7 +36,7 @@ export default function CybersecurityCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             Clear visibility into security risks and a prioritized plan to strengthen defenses.
                         </p>
                     </div>
@@ -60,7 +60,7 @@ export default function CybersecurityCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Data Protection & Privacy</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We help organizations protect sensitive data and meet privacy regulations by embedding privacy and security directly into systems and processes.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -76,7 +76,7 @@ export default function CybersecurityCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Stronger data protection, reduced regulatory risk, and increased customer trust.
                         </p>
                     </div>
@@ -106,7 +106,7 @@ export default function CybersecurityCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Identity & Access Management</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We design and implement identity and access solutions that ensure the right users have the right access at the right time—securely and at scale.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -122,7 +122,7 @@ export default function CybersecurityCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             Improved security, reduced access risk, and simplified identity management at scale.
                         </p>
                     </div>
@@ -149,7 +149,7 @@ export default function CybersecurityCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Risk & Compliance</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We help organizations manage technology risk and meet regulatory obligations while enabling innovation and operational resilience.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -165,7 +165,7 @@ export default function CybersecurityCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Stronger governance, reduced risk exposure, and confidence in regulatory compliance.
                         </p>
                     </div>

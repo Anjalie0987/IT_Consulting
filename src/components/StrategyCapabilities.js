@@ -20,7 +20,7 @@ export default function StrategyCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Digital Transformation</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We assess where your organization stands today and define a transformation strategy that modernizes operations, enhancing customer experiences and sustainability—without disrupting core business continuity.
                         </p>
                         <ul className="space-y-4">
@@ -79,7 +79,7 @@ export default function StrategyCapabilities() {
                     {/* Text Content (Right on Desktop, Second on Mobile) */}
                     <div className="order-2">
                         <h3 className="text-3xl font-bold text-gray-900 mb-6">IT Strategy & Roadmap</h3>
-                        <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg text-gray-600 leading-relaxed mb-8 text-justify">
                             We help organizations design technology strategies that are directly aligned with business priorities. Our IT strategy and roadmap services provide leadership teams with clarity on where to invest, what to modernize, and how to sequence initiatives for maximum impact.
                         </p>
                         <ul className="space-y-4 mb-8">
@@ -95,7 +95,7 @@ export default function StrategyCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             The result is a clear, actionable roadmap that enables confident decision-making, disciplined execution, and sustained technology-driven growth.
                         </p>
                     </div>
@@ -108,7 +108,7 @@ export default function StrategyCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Business Process Optimization</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We analyze end-to-end business processes to identify inefficiencies, reduce operational cost, and improve performance. Our approach focuses on practical redesign, data-driven insights, and targeted automation to deliver measurable improvements across the value chain.
                         </p>
                         <ul className="space-y-4">
@@ -167,7 +167,7 @@ export default function StrategyCapabilities() {
                     {/* Text Content */}
                     <div className="order-2">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Technology Advisory</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We provide independent, experience-led guidance to help organizations make confident technology decisions. Our advisory services focus on selecting the right platforms, architectures, and partners—balancing innovation with risk, cost, and long-term business value.
                         </p>
                         <ul className="space-y-4">

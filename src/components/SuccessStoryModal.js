@@ -194,14 +194,14 @@ export default function SuccessStoryModal({ story, isOpen, onClose }) {
 
                         <div className="mb-8">
                             <h3 className="text-lg font-bold text-gray-900 border-l-4 border-red-500 pl-3 mb-3">The Challenge</h3>
-                            <div className="prose prose-sm text-gray-600">
+                            <div className="prose prose-sm text-gray-600 text-justify">
                                 <PortableText value={story.challenge} />
                             </div>
                         </div>
 
                         <div>
                             <h3 className="text-lg font-bold text-gray-900 border-l-4 border-blue-500 pl-3 mb-3">Our Solution</h3>
-                            <div className="prose prose-sm text-gray-600">
+                            <div className="prose prose-sm text-gray-600 text-justify">
                                 <PortableText value={story.solution} />
                             </div>
                         </div>

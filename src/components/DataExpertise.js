@@ -34,7 +34,7 @@ export default function DataExpertise() {
                             <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] leading-snug mb-6">
                                 Our Expertise in Data, Analytics & AI
                             </h2>
-                            <p className="text-base text-slate-600 font-normal leading-relaxed max-w-md">
+                            <p className="text-base text-slate-600 font-normal leading-relaxed max-w-md text-justify">
                                 We help organizations turn data into a strategic asset by building trusted analytics foundations and applying AI where it delivers real business impact. Our approach focuses on clarity, governance, and measurable outcomes—ensuring insights drive better decisions, not just more dashboards.
                             </p>
                         </div>
@@ -47,7 +47,7 @@ export default function DataExpertise() {
                                 <h3 className="text-xl font-bold text-slate-900">
                                     {item.title}
                                 </h3>
-                                <p className="text-base leading-relaxed text-slate-600">
+                                <p className="text-base leading-relaxed text-slate-600 text-justify">
                                     {item.description}
                                 </p>
                             </div>

@@ -100,7 +100,7 @@ export default function NewsMediaModal({ item, onClose, isOpen }) {
                             </>
                         )}
                     </div>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-justify">
                         {item.summary}
                     </p>
                 </div>

@@ -20,7 +20,7 @@ export default function CommercialConsumerCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Retail & E-Commerce</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We help retailers and e-commerce businesses build digital platforms that deliver seamless customer experiences, optimize operations, and scale with changing consumer behavior.
                             <br /><br />
                             Our work spans omnichannel commerce, digital storefronts, supply chain integration, and data-driven personalization.
@@ -38,7 +38,7 @@ export default function CommercialConsumerCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             High-performance retail platforms that adapt to demand, improve conversion, and enable long-term growth.
                         </p>
                     </div>
@@ -81,7 +81,7 @@ export default function CommercialConsumerCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-2">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Manufacturing</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We support manufacturing organizations in modernizing technology foundations, improving operational visibility, and enabling smarter, more connected production environments.
                             <br /><br />
                             Our approach bridges IT and operational systems to unlock efficiency, resilience, and data-driven decision-making.
@@ -99,7 +99,7 @@ export default function CommercialConsumerCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Connected manufacturing environments that improve efficiency, reliability, and operational intelligence.
                         </p>
                     </div>
@@ -112,7 +112,7 @@ export default function CommercialConsumerCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-1">
                         <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Logistics & Supply Chain</h3>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-justify">
                             We help logistics and supply chain organizations build resilient, data-driven platforms that improve visibility, coordination, and operational efficiency across complex ecosystems.
                             <br /><br />
                             Our solutions support real-time decision-making and scalable growth in dynamic environments.
@@ -130,7 +130,7 @@ export default function CommercialConsumerCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-300 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-300 leading-relaxed font-medium text-justify">
                             Agile, transparent supply chains that adapt quickly to change and scale with demand.
                         </p>
                     </div>
@@ -176,7 +176,7 @@ export default function CommercialConsumerCapabilities() {
                     {/* Text Content */}
                     <div className="order-1 lg:order-2">
                         <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Education</h3>
-                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+                        <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8 text-justify">
                             We work with educational institutions and learning platforms to modernize digital infrastructure, improve access to learning, and enable data-driven decision-making.
                             <br /><br />
                             Our approach supports scalability, security, and long-term sustainability in evolving education ecosystems.
@@ -194,7 +194,7 @@ export default function CommercialConsumerCapabilities() {
                                 </li>
                             ))}
                         </ul>
-                        <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                        <p className="text-lg text-gray-600 leading-relaxed font-medium text-justify">
                             Future-ready education platforms that improve access, engagement, and operational effectiveness.
                         </p>
                     </div>
