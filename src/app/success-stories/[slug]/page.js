@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { client } from '@/lib/sanity'
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
